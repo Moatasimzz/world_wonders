@@ -12,3 +12,12 @@ wonder.links.images.forEach(url => {
     img.src = url;
     carouselImages.appendChild(img);
 });
+
+const quickLinks = document.getElementById('quick-links');
+['wiki', 'britannica', 'trip_advisor'].forEach(site => {
+    const link = document.createElement('a');
+    link.href = wonder.links[site];
+    link.target = '_blank';
+    link.textContent = site.charAt(0).toUpperCase() + site.slice(1);
+    quickLinks.appendChild(link);
+});
