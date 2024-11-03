@@ -6,4 +6,9 @@ document.getElementById('wonder-location').textContent = wonder.location;
 document.getElementById('wonder-build-year').textContent = wonder.build_year;
 document.getElementById('wonder-time-period').textContent = wonder.time_period;
 
-
+const carouselImages = document.getElementById('carousel-images');
+wonder.links.images.forEach(url => {
+    const img = document.createElement('img');
+    img.src = url;
+    carouselImages.appendChild(img);
+});
